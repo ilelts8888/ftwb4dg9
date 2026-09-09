@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập Tiếng Anh Question 24-28 Set 4 - Ms Lê Hằng English</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Nunito', sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { min-height: 100vh; background: linear-gradient(-45deg, #8854C0, #FDCB6E, #00C9A7, #FF7675, #6C5CE7); background-size: 400% 400%; animation: gradientBG 18s ease infinite; padding: 15px; color: #2d3436; position: relative; overflow-x: hidden; }
+        @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .pattern-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: 0.25; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><g fill="%23FFFFFF"><path d="M20 20 L25 10 L30 20 L40 25 L30 30 L25 40 L20 30 L10 25 Z"/><circle cx="90" cy="30" r="8"/><path d="M80 80 C80 70 100 70 100 80 C100 90 80 100 80 80 Z"/><path d="M30 90 Q35 75 45 90 T60 90" stroke="%23FFFFFF" stroke-width="4" fill="none"/></g></svg>'); animation: floatPattern 30s linear infinite; }
+        @keyframes floatPattern { 0% { background-position: 0 0; } 100% { background-position: 500px 500px; } }
+        .container { max-width: 820px; margin: 0 auto; position: relative; z-index: 1; padding-bottom: 60px; }
+        .teacher-badge { text-align: center; margin-bottom: 8px; }
+        .teacher-badge span { background: rgba(255, 255, 255, 0.95); color: #6c5ce7; padding: 6px 18px; border-radius: 20px; font-weight: 800; font-size: 0.95rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: inline-block; text-transform: uppercase; }
+        .main-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 24px; padding: 20px 25px; margin-bottom: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.12); text-align: center; border: 3px solid #ffffff; }
+        .main-title { font-size: 1.7rem; font-weight: 900; color: #2d3436; margin-bottom: 12px; }
+        .notice-box { background: #fff0f3; border: 3px dashed #ff4757; border-radius: 16px; padding: 15px 18px; margin-top: 10px; text-align: center; animation: pulseNotice 2s infinite ease-in-out; }
+        @keyframes pulseNotice { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.01); } }
+        .notice-title { color: #d63031; font-weight: 900; font-size: 1.1rem; margin-bottom: 6px; }
+        .notice-text { color: #2d3436; font-weight: 700; font-size: 0.95rem; line-height: 1.4; margin-bottom: 6px; }
+        .notice-highlight { color: #d63031; font-weight: 900; font-style: italic; }
+        .sticky-stats { position: sticky; top: 10px; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 50px; padding: 10px 20px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 8px 20px rgba(0,0,0,0.15); border: 2px solid #6c5ce7; }
+        .stat-item { font-weight: 800; font-size: 1rem; color: #2d3436; }
+        .stat-val { background: #6c5ce7; color: white; padding: 2px 10px; border-radius: 12px; font-size: 1.1rem; }
+        .progress-bar-container { flex-grow: 1; height: 12px; background: #dfe6e9; border-radius: 10px; margin: 0 15px; overflow: hidden; }
+        .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #00c9a7, #00d26a); border-radius: 10px; transition: width 0.4s ease; }
+        .question-card { background: rgba(255, 255, 255, 0.96); border-radius: 24px; padding: 24px; margin-bottom: 25px; box-shadow: 0 12px 28px rgba(0,0,0,0.12); border: 3px solid #ffffff; }
+        .question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .q-number { background: #ff7675; color: white; font-weight: 900; padding: 4px 14px; border-radius: 14px; font-size: 0.95rem; }
+        .q-category { background: #eccc68; color: #2d3436; font-weight: 800; padding: 4px 12px; border-radius: 12px; font-size: 0.85rem; }
+        .q-title { font-size: 1.15rem; font-weight: 800; color: #2d3436; line-height: 1.5; margin-bottom: 16px; }
+        .options-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .option-btn { background: #ffffff; border: 2.5px solid #e0e0e0; border-radius: 18px; padding: 14px 18px; font-size: 1.05rem; font-weight: 700; color: #2d3436; text-align: left; cursor: pointer; box-shadow: 0 5px 0 #d0d0d0; display: flex; align-items: center; transition: all 0.15s ease; position: relative; user-select: none; }
+        .option-btn:hover:not(.disabled) { transform: translateY(-2px); box-shadow: 0 7px 0 #c0c0c0; border-color: #6c5ce7; background: #f8f9fe; }
+        .option-btn:active:not(.disabled) { transform: translateY(2px); box-shadow: 0 2px 0 #c0c0c0; }
+        .opt-prefix { width: 32px; height: 32px; border-radius: 50%; background: #f1f2f6; color: #2d3436; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-right: 14px; flex-shrink: 0; transition: all 0.2s; }
+        .option-btn.correct { background: #e8fae8 !important; border-color: #00D26A !important; color: #008040 !important; box-shadow: 0 5px 0 #00aa55 !important; }
+        .option-btn.correct .opt-prefix { background: #00D26A !important; color: white !important; }
+        .option-btn.incorrect { background: #ffeae8 !important; border-color: #FF4757 !important; color: #d63031 !important; box-shadow: 0 5px 0 #d63031 !important; }
+        .option-btn.incorrect .opt-prefix { background: #FF4757 !important; color: white !important; }
+        .option-btn.disabled { cursor: default; opacity: 0.85; }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 20%, 60% { transform: translateX(-8px); } 40%, 80% { transform: translateX(8px); } }
+        .shake { animation: shake 0.4s ease-in-out; }
+        .explanation-box { display: none; margin-top: 20px; background: #f8f9fa; border-radius: 18px; padding: 18px 20px; border-left: 6px solid #6c5ce7; box-shadow: inset 0 2px 6px rgba(0,0,0,0.04); animation: slideDown 0.35s ease-out forwards; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .exp-head { font-weight: 900; color: #6c5ce7; font-size: 1.05rem; margin-bottom: 10px; }
+        .exp-section { margin-bottom: 10px; font-size: 0.95rem; line-height: 1.5; }
+        .vocab-list { background: #ffffff; border-radius: 12px; padding: 10px 14px; margin: 6px 0; border: 1px solid #e2e8f0; }
+        .vocab-item { margin-bottom: 4px; color: #4a5568; font-weight: 600; }
+        .submit-container { text-align: center; margin: 30px 0; }
+        .btn-submit { background: linear-gradient(135deg, #00c9a7, #00d26a); color: white; font-size: 1.3rem; font-weight: 900; padding: 16px 40px; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(0, 210, 106, 0.4); transition: all 0.2s ease; }
+        .btn-submit:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 12px 25px rgba(0, 210, 106, 0.5); }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px); z-index: 999; display: none; justify-content: center; align-items: center; padding: 20px; }
+        .modal-card { background: white; border-radius: 28px; max-width: 500px; width: 100%; padding: 30px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.25); animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .modal-title { font-size: 1.8rem; font-weight: 900; color: #2d3436; margin-bottom: 10px; }
+        .modal-score { font-size: 3rem; font-weight: 900; color: #6c5ce7; margin: 15px 0; }
+        .modal-comment { background: #f0edff; border-radius: 16px; padding: 16px; font-size: 1.05rem; font-weight: 700; color: #2d3436; line-height: 1.5; margin-bottom: 20px; border: 2px solid #6c5ce7; }
+        .btn-close { background: #6c5ce7; color: white; font-weight: 800; font-size: 1.1rem; padding: 12px 30px; border: none; border-radius: 30px; cursor: pointer; box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3); }
+    </style>
+</head>
+<body>
+    <div class="pattern-bg"></div>
+    <div class="container">
+        <div class="teacher-badge"><span>Giáo viên tạo: Ms Lê Hằng English</span></div>
+        <div class="main-header">
+            <h1 class="main-title">🌟 BÀI TẬP QUESTION 24 - 28 TIẾNG ANH TƯƠNG TÁC 🌟</h1>
+            <div class="notice-box">
+                <div class="notice-title">⚠️ LỜI NHẮC CỰC KỲ QUAN TRỌNG ⚠️</div>
+                <div class="notice-text">Chỉ có đọc kỹ giải thích ngay sau mỗi câu, sau đó ghi lại từ vựng/cấu trúc mới vào vở để học thì mới thực sự giỏi lên.</div>
+                <div class="notice-text">Làm cho xong mà không đọc giải thích hay đọc qua loa không ghi chép thì chỉ tốn thời gian vô ích!</div>
+                <div class="notice-highlight">* Kéo tới đâu, làm tới đó! *</div>
+            </div>
+        </div>
+        <div class="sticky-stats">
+            <div class="stat-item">📝 Tiến độ: <span id="progress-text" class="stat-val">0/4</span></div>
+            <div class="progress-bar-container"><div class="progress-bar-fill" id="progress-fill"></div></div>
+            <div class="stat-item">⭐ Điểm số: <span id="score-text" class="stat-val">0</span></div>
+        </div>
+        <div id="quiz-container"></div>
+        <div class="submit-container"><button class="btn-submit" onclick="submitQuiz()">🎉 NỘP BÀI THI & XEM KẾT QUẢ</button></div>
+    </div>
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-card">
+            <div class="modal-title">🎓 KẾT QUẢ BÀI THI</div>
+            <div class="modal-score" id="modal-score-val">0 / 4</div>
+            <div class="modal-comment" id="modal-comment-text"></div>
+            <button class="btn-close" onclick="closeModal()">Đóng & Kiểm tra bài</button>
+        </div>
+    </div>
+    <script>
+        const rawQuestions = [{"id": 24, "type": "mcq", "category": "Question 24 - So sánh kép (Double Comparative)", "question": "Choose the correct sentence made from given cues: 'more / developed / a city / be / more / food / people / throw away.'", "options": ["The more developed a city is, the more food people throw away.", "The more developed a city is, more food people throw away.", "More developed a city is, more food people throw away.", "More developed a city is, the more food people throw away."], "answer": "The more developed a city is, the more food people throw away.", "explanation": {"vocab": ["A. The more developed a city is, the more food people throw away. (Đúng chuẩn cấu trúc So sánh kép 'The... the...')", "B. ...more food people... -> Thiếu mạo từ 'the' ở mệnh đề thứ hai.", "C. More developed a city is... -> Thiếu mạo từ 'the' ở cả hai mệnh đề.", "D. More developed... -> Thiếu mạo từ 'the' ở mệnh đề đầu tiên."], "translation": "Thành phố càng phát triển, con người càng lãng phí/vứt bỏ nhiều thức ăn hơn.", "why_correct": "Áp dụng cấu trúc So sánh kép 'Càng... thì càng...': 'The + so sánh hơn + S + V, the + so sánh hơn + S + V'. Bắt buộc phải có 'the' ở đầu cả hai mệnh đề.", "why_wrong": "Các đáp án B, C, D đều thiếu mạo từ 'the' ở một hoặc cả hai mệnh đề trong cấu trúc so sánh kép."}}, {"id": 25, "type": "mcq", "category": "Question 25 - Cụm động từ & Cấu trúc Advise (Advise sb to V / Cut down on)", "question": "Choose the correct sentence made from given cues: 'doctor / advise / cut down / his / drinking.'", "options": ["The doctor advised him to cut down on his drinking.", "The doctor advised him to cut down in his drinking.", "The doctor advised him cutting down on his drinking.", "The doctor advised him cut down on his drinking."], "answer": "The doctor advised him to cut down on his drinking.", "explanation": {"vocab": ["A. The doctor advised him to cut down on his drinking. (Đúng cấu trúc khuyên bảo & cụm động từ)", "B. ...cut down in... -> Dùng sai giới từ 'in' (phải dùng 'on').", "C. ...advised him cutting down... -> Sai dạng động từ (phải dùng 'to V' chứ không dùng 'V-ing').", "D. ...advised him cut down... -> Thiếu 'to' trước động từ nguyên mẫu."], "translation": "Bác sĩ đã khuyên anh ấy nên cắt giảm việc uống rượu/bia.", "why_correct": "Cấu trúc khuyên ai làm gì: 'advise somebody + to V'. Cụm động từ cố định: 'cut down on something' (cắt giảm cái gì). Kết hợp lại ta được: 'advised him to cut down on...'.", "why_wrong": "Đáp án B sai giới từ 'in'; Đáp án C dùng 'V-ing'; Đáp án D thiếu 'to' sau tân ngữ 'him'."}}, {"id": 27, "type": "mcq", "category": "Question 27 - Viết lại câu (Popular -> Enjoy very much)", "question": "Choose the sentence that is closest in meaning: 'Street food is incredibly popular in Vietnam.'", "options": ["Vietnamese people enjoy street food very much.", "Street food is not popular in Vietnam.", "People rarely eat street food in Vietnam.", "Very popular street food is found in Vietnam."], "answer": "Vietnamese people enjoy street food very much.", "explanation": {"vocab": ["A. Vietnamese people enjoy street food very much. (Đồng nghĩa hoàn toàn với câu gốc)", "B. Street food is not popular in Vietnam. -> Phủ định 'không phổ biến' (ngược nghĩa).", "C. People rarely eat street food in Vietnam. -> 'rarely' (hiếm khi) (ngược nghĩa).", "D. Very popular street food is found in Vietnam. -> Cách diễn đạt không tự nhiên và làm lệch trọng tâm ý chính."], "translation": "Ẩm thực đường phố cực kỳ phổ biến ở Việt Nam. -> Người Việt Nam rất thích đồ ăn đường phố.", "why_correct": "Khi một món ăn/loại hình ẩm thực 'incredibly popular' (cực kỳ phổ biến/được ưa chuộng) ở một quốc gia, điều đó đồng nghĩa với việc người dân nơi đó 'enjoy it very much' (rất yêu thích nó).", "why_wrong": "Đáp án B & C mang nghĩa phủ định/hiếm khi (trái ngược hoàn toàn); Đáp án D diễn đạt khiên cưỡng không lột tả hết ý thích thú của con người."}}, {"id": 28, "type": "mcq", "category": "Question 28 - Viết lại câu chỉ Nguyên nhân - Kết quả (Because -> Since)", "question": "Choose the sentence that is closest in meaning: 'She didn’t get enough sleep because she stayed up late studying.'", "options": ["Since she stayed up late studying, she didn’t get enough sleep.", "She didn’t get enough sleep, so she stayed up late studying.", "She didn’t get enough sleep, yet she stayed up late studying.", "She didn’t get enough sleep; therefore, she stayed up late studying."], "answer": "Since she stayed up late studying, she didn’t get enough sleep.", "explanation": {"vocab": ["A. Since she stayed up late studying, she didn’t get enough sleep. (Đúng logic nguyên nhân - kết quả)", "B. ...so she stayed up late studying. -> Nhầm lẫn nguyên nhân và kết quả (nói ngủ không đủ nên mới thức khuya).", "C. ...yet she stayed up late... -> Dùng 'yet' (nhưng) sai mối quan hệ nguyên nhân - kết quả.", "D. ...therefore, she stayed up late... -> Dùng 'therefore' nhầm lẫn nguyên nhân - kết quả."], "translation": "Cô ấy không ngủ đủ giấc vì cô ấy đã thức khuya học bài. -> Vì cô ấy thức khuya học bài, cô ấy đã không ngủ đủ giấc.", "why_correct": "Liên từ chỉ nguyên nhân: 'because' = 'since' (vì/bởi vì). Mệnh đề chỉ nguyên nhân là 'she stayed up late studying', mệnh đề chỉ kết quả là 'she didn't get enough sleep'. Đặt 'Since + Mệnh đề nguyên nhân, Mệnh đề kết quả' là hoàn toàn chính xác.", "why_wrong": "Các đáp án B & D bị đảo ngược logic (biến 'ngủ không đủ' thành nguyên nhân khiến 'thức khuya'); Đáp án C dùng liên từ chỉ sự đối lập 'yet'."}}];
+
+        let userAnswers = {};
+        let totalScore = 0;
+        let audioCtx = null;
+        let shuffledMap = {};
+
+        function initAudio() { if (!audioCtx) { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } }
+        function playSound(type) {
+            try {
+                initAudio();
+                if (audioCtx.state === 'suspended') { audioCtx.resume(); }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain); gain.connect(audioCtx.destination);
+                if (type === 'correct') {
+                    osc.type = 'sine'; osc.frequency.setValueAtTime(523.25, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(1046.50, audioCtx.currentTime + 0.15);
+                    gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                    osc.start(); osc.stop(audioCtx.currentTime + 0.4);
+                } else {
+                    osc.type = 'sawtooth'; osc.frequency.setValueAtTime(220, audioCtx.currentTime);
+                    osc.frequency.setValueAtTime(160, audioCtx.currentTime + 0.15);
+                    gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                    osc.start(); osc.stop(audioCtx.currentTime + 0.4);
+                }
+            } catch (e) { console.log("Audio play error:", e); }
+        }
+        function triggerConfetti() { if (typeof confetti === 'function') { confetti({ particleCount: 60, spread: 70, origin: { y: 0.7 } }); } }
+        function shuffleArray(array) {
+            let arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; }
+            return arr;
+        }
+        function escapeHtml(str) { return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container'); container.innerHTML = '';
+            rawQuestions.forEach((q, index) => {
+                const card = document.createElement('div'); card.className = 'question-card'; card.id = `q-card-${q.id}`;
+                const shuffledOptions = shuffleArray(q.options); shuffledMap[q.id] = shuffledOptions;
+                let optionsHTML = shuffledOptions.map((opt, optIdx) => {
+                    const letter = String.fromCharCode(65 + optIdx);
+                    return `<button class="option-btn" onclick="selectOption(${q.id}, ${optIdx}, this)"><span class="opt-prefix">${letter}</span><span class="opt-text">${escapeHtml(opt)}</span></button>`;
+                }).join('');
+                const exp = q.explanation;
+                const vocabHTML = exp.vocab.map(v => `<div class="vocab-item">• ${escapeHtml(v)}</div>`).join('');
+                card.innerHTML = `
+                    <div class="question-header"><span class="q-number">Câu ${index + 1} / 4</span><span class="q-category">${escapeHtml(q.category)}</span></div>
+                    <div class="q-title">${escapeHtml(q.question)}</div>
+                    <div class="options-grid" id="options-${q.id}">${optionsHTML}</div>
+                    <div class="explanation-box" id="exp-${q.id}">
+                        <div class="exp-head">💡 GIẢI THÍCH CHI TIẾT TỪ MS LÊ HẰNG:</div>
+                        <div class="exp-section"><strong>1. Phân tích từ vựng & 4 đáp án:</strong><div class="vocab-list">${vocabHTML}</div></div>
+                        <div class="exp-section"><strong>2. Dịch nghĩa toàn câu:</strong><p style="color: #2b6cb0; font-weight: 700; margin-top: 2px;">"${escapeHtml(exp.translation)}"</p></div>
+                        <div class="exp-section"><strong>3. Tại sao đáp án này ĐÚNG?</strong><p style="color: #276749; margin-top: 2px;">${escapeHtml(exp.why_correct)}</p></div>
+                        <div class="exp-section"><strong>4. Tại sao các đáp án còn lại SAI?</strong><p style="color: #9b2c2c; margin-top: 2px;">${escapeHtml(exp.why_wrong)}</p></div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+        function selectOption(qId, optIdx, btn) {
+            if (userAnswers[qId] !== undefined) return;
+            const question = rawQuestions.find(q => q.id === qId);
+            const selectedOpt = shuffledMap[qId][optIdx];
+            const isCorrect = (selectedOpt === question.answer);
+            userAnswers[qId] = selectedOpt;
+            const optionsContainer = document.getElementById(`options-${qId}`);
+            const allButtons = optionsContainer.querySelectorAll('.option-btn');
+            allButtons.forEach((b, idx) => {
+                b.classList.add('disabled');
+                if (shuffledMap[qId][idx] === question.answer) { b.classList.add('correct'); }
+            });
+            if (isCorrect) { btn.classList.add('correct'); playSound('correct'); triggerConfetti(); totalScore += 1; }
+            else { btn.classList.add('incorrect'); btn.classList.add('shake'); playSound('wrong'); }
+            const expBox = document.getElementById(`exp-${qId}`);
+            if (expBox) { expBox.style.display = 'block'; }
+            updateStats();
+        }
+        function updateStats() {
+            const answeredCount = Object.keys(userAnswers).length;
+            document.getElementById('progress-text').innerText = `${answeredCount}/4`;
+            document.getElementById('score-text').innerText = totalScore;
+            document.getElementById('progress-fill').style.width = `${(answeredCount / 4) * 100}%`;
+        }
+        function submitQuiz() {
+            const answeredCount = Object.keys(userAnswers).length;
+            if (answeredCount < 4) { if (!confirm(`Con chưa làm hết các câu (${answeredCount}/4 câu). Con có chắc chắn muốn nộp bài ngay không?`)) { return; } }
+            const pct = (totalScore / 4) * 100;
+            let comment = "";
+            if (pct < 50) { comment = "Điểm lần này chưa cao lắm, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!"; }
+            else if (pct <= 80) { comment = "Con đã có tiến bộ khá ổn rồi, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!"; }
+            else { comment = "Làm tốt lắm, con cố gắng rinh điểm 10 tuyệt đối ở lần sau nha!"; }
+            document.getElementById('modal-score-val').innerText = `${totalScore} / 4`;
+            document.getElementById('modal-comment-text').innerText = comment;
+            document.getElementById('result-modal').style.display = 'flex';
+            triggerConfetti();
+        }
+        function closeModal() { document.getElementById('result-modal').style.display = 'none'; }
+        window.onload = function() { renderQuiz(); };
+    </script>
+</body>
+</html>
